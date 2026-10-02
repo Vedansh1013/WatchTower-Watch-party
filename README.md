@@ -4,28 +4,23 @@ Watchtower is a real-time YouTube watch party built for the intern assignment. P
 
 ## Live demo
 
-**Live URL:** `https://YOUR-APP-NAME.onrender.com`
+**Live URL:** `https://watchtower-tqgj.onrender.com/`
 
-Replace the placeholder above with the deployed Render URL before submitting. The project includes a `render.yaml` so the deployment is a single Node web service with WebSocket support.
+## What I built
 
-## What is implemented
+- **A shared YouTube room:** Create a room, get a short invite link or code, and bring people into the same watch party.
 
-- Create a room with a short invite code and shareable link.
-- Join by room code or `/room/:code` link.
-- Public landing page with Log in and Sign up actions; guests can create or join as Guest, while PostgreSQL-backed accounts add a profile username, a live password-strength meter, and server-side password hashing.
-- Private per-account room history: signed-in users can see rooms they hosted or joined, their room codes, and their last activity time.
-- A dedicated About page linked from the landing-page footer.
-- YouTube IFrame Player API embedded in a custom, role-aware player surface.
-- Server-authoritative play, pause, seek, and change-video synchronization.
-- Host, moderator, participant, and viewer roles.
-- Backend permission checks before every privileged action.
-- Host role assignment, participant removal, and host transfer.
-- Participant approval requests for playback changes.
-- Real-time room chat.
-- Live emoji reactions that appear for everyone watching the room.
-- A compact, auto-rotating glass feature carousel on the landing page.
-- Reconnect/error/loading states and responsive UI for desktop and mobile.
-- OOP-style `Room`, `Participant`, and `RoomManager` classes on the backend.
+- **Playback that stays together:** When the host plays, pauses, seeks, or changes a video, the update is sent to everyone in the room in real time.
+
+- **Guest and signed-in access:** People can join quickly as guests. Signed-in users get a username and can see their own room history later.
+
+- **Clear room roles:** The host can promote someone to moderator, remove a participant, or transfer the room to someone else. Hosts and moderators control the player; participants can request changes instead.
+
+- **Permissions checked on the server:** It is not just a locked button in the UI — the backend checks whether someone is allowed to perform an action before it is applied.
+
+- **The social parts of a watch party:** There is live room chat and quick emoji reactions, so people can react without interrupting the video.
+
+- **Built for actual use:** The interface works on desktop and mobile, handles loading and reconnect states, and uses PostgreSQL for accounts, sessions, and personal room history.
 
 ## Run locally
 
