@@ -1,0 +1,442 @@
+/* Room experience: a focused cinema surface with communication kept secondary. */
+.room-page {
+  background:
+    radial-gradient(circle at 82% -10%, rgba(74, 111, 103, 0.16), transparent 29%),
+    radial-gradient(circle at 2% 22%, rgba(64, 83, 128, 0.11), transparent 24%),
+    #0b0e13;
+}
+
+.room-page .room-header {
+  border-bottom-color: rgba(255, 255, 255, 0.09);
+  background: rgba(11, 14, 19, 0.82);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+}
+
+.room-page .room-header-inner {
+  height: 74px;
+}
+
+.room-page .room-main {
+  padding: 43px 0 78px;
+}
+
+.room-page .room-heading-row {
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.room-intro-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #aeb9c6;
+  font-family: 'Azeret Mono', ui-monospace, monospace;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.room-page .room-heading-row h1 {
+  max-width: 720px;
+  margin: 14px 0 11px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(36px, 3.9vw, 52px);
+  font-weight: 600;
+  letter-spacing: -0.075em;
+  line-height: 0.96;
+}
+
+.room-page .room-heading-row p {
+  max-width: 570px;
+  color: #8994a2;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.room-page .room-heading-status {
+  min-width: 230px;
+  padding: 14px 16px;
+  border-color: rgba(255, 255, 255, 0.11);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.room-page .status-orb {
+  display: grid;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 11px;
+  line-height: 0;
+}
+
+.room-page .status-orb svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.room-page .room-workspace {
+  grid-template-columns: minmax(0, 1fr) 336px;
+  gap: 24px;
+}
+
+.room-page .cinema-card {
+  overflow: hidden;
+  border-color: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  background: rgba(18, 23, 31, 0.84);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.055);
+}
+
+.room-page .cinema-card-heading {
+  padding: 19px 22px 16px;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.045), transparent 52%);
+}
+
+.room-page .video-card-heading h2 {
+  margin-top: 7px;
+  color: #eef2ed;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+.room-page .sync-badge {
+  padding: 7px 10px;
+  border: 1px solid rgba(215, 255, 99, 0.14);
+  border-radius: 999px;
+  color: var(--lime);
+  background: rgba(215, 255, 99, 0.06);
+}
+
+.room-page .video-shell {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  background: #07090d;
+}
+
+.room-page .video-frame {
+  height: min(51vw, 548px);
+  min-height: 350px;
+  background: #05070a;
+}
+
+.room-page .player-controls {
+  padding: 15px 20px 17px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(14, 18, 24, 0.96);
+}
+
+.room-page .range-wrap::before {
+  background: #2b3440;
+}
+
+.room-page .range-progress {
+  box-shadow: 0 0 13px rgba(215, 255, 99, 0.24);
+}
+
+.room-page .play-button {
+  width: 34px;
+  height: 34px;
+  box-shadow: 0 7px 18px rgba(215, 255, 99, 0.16);
+}
+
+.room-page .reaction-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(20, 26, 34, 0.9);
+}
+
+.room-page .reaction-bar-copy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.room-page .reaction-bar-icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(215, 255, 99, 0.2);
+  border-radius: 9px;
+  color: #17200b;
+  background: var(--lime);
+}
+
+.room-page .reaction-bar-copy strong,
+.room-page .reaction-bar-copy span {
+  display: block;
+}
+
+.room-page .reaction-bar-copy strong {
+  color: #edf1eb;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.room-page .reaction-bar-copy div > span {
+  margin-top: 2px;
+  color: #778290;
+  font-family: 'Azeret Mono', ui-monospace, monospace;
+  font-size: 8px;
+}
+
+.room-page .reaction-options {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.room-page .reaction-button {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.045);
+  font-size: 17px;
+  line-height: 1;
+  transition: transform 180ms var(--motion-spring), border-color 180ms ease, background 180ms ease;
+}
+
+.room-page .reaction-button:hover,
+.room-page .reaction-button.is-active {
+  border-color: rgba(215, 255, 99, 0.45);
+  background: rgba(215, 255, 99, 0.11);
+  transform: translateY(-2px) scale(1.06);
+}
+
+.room-page .reaction-button:active {
+  transform: translateY(0) scale(0.92);
+}
+
+.room-page .reaction-overlay {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.room-page .reaction-float {
+  position: absolute;
+  bottom: 9%;
+  left: var(--reaction-x);
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  animation: reaction-rise 2400ms var(--motion-ease) var(--reaction-delay) both;
+}
+
+.room-page .reaction-float-emoji {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  background: rgba(12, 16, 22, 0.7);
+  box-shadow: 0 11px 24px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(8px);
+  font-size: 24px;
+}
+
+.room-page .reaction-float-name {
+  max-width: 90px;
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.78);
+  font-family: 'Azeret Mono', ui-monospace, monospace;
+  font-size: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.room-page .video-source-row {
+  padding: 15px 20px 17px;
+  border-top-color: rgba(255, 255, 255, 0.07);
+  background: rgba(17, 22, 29, 0.88);
+}
+
+.room-page .source-icon {
+  width: 29px;
+  height: 29px;
+  border-radius: 9px;
+}
+
+.room-page .change-video-control input {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.room-page .watch-column-support {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.room-page .request-queue,
+.room-page .permission-callout,
+.room-page .room-note {
+  margin-top: 0;
+  border-radius: 15px;
+}
+
+.room-page .room-note {
+  border-color: rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.028);
+}
+
+.room-page .room-sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.room-page .side-section {
+  border-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  background: rgba(19, 24, 32, 0.78);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 18px 42px rgba(0, 0, 0, 0.12);
+}
+
+.room-page .chat-section {
+  height: 430px;
+  margin-top: 0;
+}
+
+.room-page .participants-section {
+  min-height: 0;
+}
+
+.room-page .side-section-heading {
+  padding: 16px 17px 13px;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.room-page .side-section-heading h3 {
+  margin-top: 5px;
+  color: #e9eeea;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+}
+
+.room-page .participant-list {
+  padding: 7px 9px 9px;
+}
+
+.room-page .participant-row {
+  min-height: 50px;
+}
+
+.room-page .message-list {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.07), transparent 55%);
+}
+
+.room-page .chat-form {
+  padding: 11px;
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.room-page .chat-form input {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+@keyframes reaction-rise {
+  0% { opacity: 0; transform: translate3d(-50%, 16px, 0) scale(0.82); }
+  18% { opacity: 1; transform: translate3d(-50%, 0, 0) scale(1); }
+  78% { opacity: 1; transform: translate3d(-50%, -88px, 0) scale(1.04); }
+  100% { opacity: 0; transform: translate3d(-50%, -116px, 0) scale(0.94); }
+}
+
+@media (max-width: 1080px) {
+  .room-page .room-workspace {
+    grid-template-columns: minmax(0, 1fr) 310px;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 820px) {
+  .room-page .room-main {
+    padding-top: 34px;
+  }
+
+  .room-page .room-heading-row {
+    align-items: flex-start;
+  }
+
+  .room-page .room-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .room-page .room-sidebar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .room-page .chat-section {
+    height: 390px;
+  }
+}
+
+@media (max-width: 560px) {
+  .room-page .room-header-inner {
+    height: 62px;
+  }
+
+  .room-page .room-heading-row h1 {
+    font-size: 38px;
+  }
+
+  .room-page .room-heading-status {
+    min-width: 0;
+  }
+
+  .room-page .cinema-card-heading {
+    padding: 15px;
+  }
+
+  .room-page .video-frame {
+    height: 57vw;
+    min-height: 210px;
+  }
+
+  .room-page .reaction-bar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 11px;
+    padding: 13px 14px;
+  }
+
+  .room-page .reaction-options {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .room-page .reaction-button {
+    width: 39px;
+    height: 36px;
+  }
+
+  .room-page .video-source-row {
+    padding: 14px;
+  }
+
+  .room-page .room-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .room-page .chat-section {
+    height: 350px;
+  }
+}
