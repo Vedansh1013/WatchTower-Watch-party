@@ -2,9 +2,9 @@
 
 Watchtower is a real-time YouTube watch party. People join a room, share one timeline, chat, and follow a permission model where the host and moderators control playback while participants can request changes.
 
-## Live demo
+## Live URL
 
-🔗 **Live Demo:** [Watchtower — Real-Time Watch Party](https://watchtower-tqgj.onrender.com/)
+🔗 **Live URL:** [Watchtower — Real-Time Watch Party](https://watchtower-tqgj.onrender.com/)
 
 ## What I built
 
