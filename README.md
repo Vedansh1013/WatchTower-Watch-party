@@ -26,7 +26,7 @@ Watchtower is a real-time YouTube watch party. People join a room, share one tim
 
 Requirements: Node.js 20+, npm 10+, and a PostgreSQL database. Render PostgreSQL is the recommended option for this project.
 
-1. Create a `.env` file in the project root from `.env.example`.
+1. Create a `.env` file in the project root.
 2. Paste your Render **External Database URL** into `DATABASE_URL` for local development.
 3. Keep `.env` private; it is intentionally ignored by Git and ZIP releases.
 
@@ -113,7 +113,7 @@ The most important security boundary is on the backend. UI buttons are disabled 
 4. Set `NODE_VERSION=20`.
 5. Set `CLIENT_ORIGIN` to the final Render URL if you want an explicit CORS allow-list. Same-origin production hosting also works without it.
 6. Set `DATABASE_URL` to the **Internal Database URL** from your Render PostgreSQL database. Keep the web service and database in the same Render region.
-7. Open the deployed URL and run the demo flow above. Add the final URL to this README before submission.
+7. Open the deployed URL and run the demo flow above.
 
 ## Code walkthrough talking points
 
